@@ -517,3 +517,8 @@ WeatherGPT was developed as a practical implementation of a Smart India Hackatho
 Active development.
 
 The project may be extended with additional meteorological datasets, official weather services, improved forecasting capabilities, additional regional languages, and enhanced decision-support features.
+
+
+## Vercel API
+
+The deployment exposes `/api/health` for a quick smoke test. Add `OPENWEATHER_API_KEY` and `GEMINI_API_KEY` in Vercel before using live weather and AI features.
