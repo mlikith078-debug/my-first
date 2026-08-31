@@ -1,0 +1,2 @@
+import { getWeather } from '../lib/weather';
+export default async function handler(req: any, res: any) { try { const lat = Number(req.query.lat); const lon = Number(req.query.lon); const name = String(req.query.name || 'Your location'); if (!Number.isFinite(lat) || !Number.isFinite(lon)) return res.status(400).json({ error: 'Valid lat and lon are required' }); return res.status(200).json(await getWeather(lat, lon, name)); } catch (error: any) { console.error('weather:', error); return res.status(500).json({ error: error.message || 'Weather is temporarily unavailable' }); } }
