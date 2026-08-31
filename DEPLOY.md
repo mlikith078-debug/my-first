@@ -9,7 +9,11 @@ In Vercel, import this GitHub repository and add these Environment Variables for
 
 Do not add the VITE_ prefix. These keys are used only by the Vercel API functions and are never sent to the browser.
 
-## 2. Build settings
+## 2. Disable deployment protection for a public app
+
+For a public website, open Vercel Project Settings → Deployment Protection and turn off Vercel Authentication/Deployment Protection. If it remains enabled, browser requests to /api/* are redirected to a Vercel login HTML page instead of receiving JSON.
+
+## 3. Build settings
 
 Vercel should detect Vite automatically. If it asks:
 
@@ -20,9 +24,11 @@ Vercel should detect Vite automatically. If it asks:
 
 Then click Deploy.
 
-## 3. Test the deployed app
+## 4. Test the deployed app
 
-Open the deployment URL and check:
+First open /api/health on the deployment URL. It must return JSON with status: ok.
+
+Then check:
 
 1. Mumbai weather loads on the home screen.
 2. Searching another city shows OpenWeather locations.
