@@ -1,4 +1,4 @@
-const MODELS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.0-flash'];
+const MODELS = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-2.5-flash-lite'];
 
 function getKey() {
   const raw = process.env.GEMINI_API_KEY;
