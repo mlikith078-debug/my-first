@@ -14,7 +14,7 @@ export default async function handler(req: any, res: any) {
       'Location: ' + (location || 'unknown'),
       'Live weather JSON: ' + JSON.stringify(weather || {}),
       'User question: ' + message,
-    ].join('\\n\\n');
+    ].join('\n\n');
 
     return res.status(200).json({ content: await askGemini(prompt) });
   } catch (error: any) {
